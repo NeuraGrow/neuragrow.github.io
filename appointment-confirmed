@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuraGrow - Confirmation de rendez-vous</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #1a1a1a;
+        }
+        .container {
+            background: #2a2a2a;
+            border: 1px solid #4a4a4a;
+        }
+        .glow-text {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+        .video-container {
+            position: relative;
+            border: 1px solid #4a4a4a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-gray-200">
+    <div class="container p-10 rounded-xl shadow-2xl max-w-3xl w-full text-center">
+        <h1 class="text-3xl font-semibold text-white mb-6 glow-text">Confirmation de votre rendez-vous</h1>
+        <p class="text-gray-300 mb-8 text-base">
+            Votre consultation avec NeuraGrow est confirmée. Vous recevrez sous peu une confirmation par e-mail et SMS avec la date et l’heure. 
+            <span class="text-white font-medium">Veuillez noter ce rendez-vous dans votre agenda.</span>
+        </p>
+        <p class="text-gray-400 mb-6 text-base">
+            NeuraGrow accompagne les cliniques dans leur développement grâce à des solutions marketing stratégiques pour attirer et fidéliser leurs clients. 
+            Visionnez cette vidéo pour préparer votre consultation :
+        </p>
+        <div class="video-container w-full h-0 pb-[56.25%] mb-8">
+            <iframe 
+                class="absolute top-0 left-0 w-full h-full" 
+                src="https://www.youtube.com/embed/VOTRE_ID_ICI" 
+                title="Vidéo NeuraGrow" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p class="text-gray-500 text-sm">
+            Pour toute question, contactez notre équipe à <a href="mailto:contact@neuragrow.com" class="text-gray-200 hover:text-white transition">contact@neuragrow.org</a>.
+        </p>
+    </div>
+</body>
+</html>
